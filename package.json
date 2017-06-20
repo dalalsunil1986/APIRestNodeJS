@@ -1,0 +1,32 @@
+{
+  "name": "mikavoid-todo-api",
+  "version": "1.0.0",
+  "description": "Simple Todo REST API with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikavoid/APIRestNodeJS.git"
+  },
+  "keywords": [
+    "todo",
+    "tasks",
+    "API"
+  ],
+  "author": "Mickaël BOULAT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikavoid/APIRestNodeJS/issues"
+  },
+  "homepage": "https://github.com/mikavoid/APIRestNodeJS#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "moment": "^2.18.1",
+    "mongoose": "^4.10.7",
+    "morgan": "^1.8.2"
+  }
+}
