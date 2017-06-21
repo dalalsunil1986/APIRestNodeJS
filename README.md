@@ -43,7 +43,7 @@ nodemon ./app.js
 
 ## Running Mongo
 ```docker
-docker run --name mymongo -p 27017:27017 -d mongo
+docker run --name mymongo -p 8081:27017 -d mongo
 ```
 
 ## Exec Mongo
