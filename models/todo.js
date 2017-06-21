@@ -5,6 +5,7 @@ const Task = mongoose.model('Task', taskSchema.schema)
 
 exports.all = all
 exports.find = find
+exports.findByStatus = findByStatus
 exports.create = create
 exports.update = update
 exports.remove = remove
@@ -15,6 +16,10 @@ function all() {
 
 function find(id) {
     return Task.findById(id, {"__v" : 0})
+}
+
+function findByStatus(status) {
+    return Task.find({"status": status}, {"__v": 0}).sort({ date: -1}).exec()
 }
 
 function create(data) {
@@ -41,7 +46,6 @@ function update(id, data) {
 
             return task.save()
         }
-        //() => {} // Error
     )
     return promise
 }

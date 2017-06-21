@@ -4,6 +4,7 @@ const Todo = require('../models/todo')
 
 exports.all = all
 exports.find = find
+exports.findByStatus = findByStatus
 exports.create = create
 exports.update = update
 exports.remove = remove
@@ -28,6 +29,23 @@ function find(req, res) {
                 res.status(404)
                 res.json({ message: 'Task not found' })
             }
+            res.json(task)
+        },
+        (err) => {
+            res.status(500)
+            res.json(err)
+        }
+    )
+}
+
+function findByStatus(req, res) {
+    Todo.findByStatus(req.params.status).then(
+        (task) => {
+            if (null === task) {
+                res.status(404)
+                res.json({ message: req.params.status + 'task not found' })
+            }
+            console.log(task)
             res.json(task)
         },
         (err) => {
