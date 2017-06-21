@@ -26,7 +26,7 @@ nodemon ./app.js
     "title":"Titre de ma tâche",
     "description": "Description",
     "created": "Tue Jun 20 2017 14:24:29 GMT+0200",
-    "status": "done"
+    "status": "complete"
 }
 ```
 
@@ -42,12 +42,12 @@ nodemon ./app.js
 # MongoDB
 
 ## Running Mongo
-```console
+```docker
 docker run --name mymongo -p 27017:27017 -d mongo
 ```
 
 ## Exec Mongo
-```bash
+```docker
 docker exec -ti mymongo /bin/bash
 ```
 
